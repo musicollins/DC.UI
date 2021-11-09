@@ -1,0 +1,16 @@
+﻿@page
+@model DC.UI.Pages.Contact.ContactModel
+@{
+}
+
+
+<h1>Contact Form</h1>
+
+@foreach (var cust in Model.Customer)
+{
+    <h6>@cust.Name</h6>
+    <form asp-page-handler="Edit">
+        <input type="hidden" asp-for="Name" value="@cust.Name" />
+        <button type="submit">Edit</button>
+    </form>
+}

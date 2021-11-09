@@ -1,0 +1,14 @@
+﻿@page
+@model DC.UI.Pages.Contact.EditModel
+@{
+}
+
+<h1>Edit</h1>
+
+<h3>Hello @Model.Name</h3>
+
+<form asp-page-handler="Save">
+    <input type="text" asp-for="Name" value="@Model.Name" />
+    <button type="submit">Save</button>
+</form>
+
